@@ -24,8 +24,13 @@ assignees: ''
 
 - **How will this be tested?**
 - **What are the test cases?**
+- [ ] Case 1
+- [ ] Case 2
+- [ ] Case 3
 - **What are the test steps?**
-- **What are the test coverage?**
+- [ ] Step 1
+- [ ] Step 2
+- [ ] Step 3
 
 ### Implementation 🎯
 
