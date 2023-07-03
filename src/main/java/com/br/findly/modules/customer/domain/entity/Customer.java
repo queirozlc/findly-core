@@ -27,6 +27,5 @@ public class Customer {
 
     @Deprecated
     public Customer() {
-
     }
 }
