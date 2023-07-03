@@ -2,7 +2,7 @@
 name: Feature 🚀
 about: New implementation or improvement of existing functionality
 title: 'Feat: '
-labels: 'feature'
+labels: 'enhancement'
 assignees: ''
 ---
 
