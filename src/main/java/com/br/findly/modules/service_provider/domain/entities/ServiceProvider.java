@@ -20,6 +20,7 @@ public class ServiceProvider {
     private String email;
     private String phone;
     private String cnpj;
+    private String avatar;
     private String cpf;
     private String birthDate;
 

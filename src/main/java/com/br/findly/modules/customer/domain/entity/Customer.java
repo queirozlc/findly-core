@@ -13,6 +13,8 @@ public class Customer {
     private String name;
     private String email;
     private String password;
+
+    private String avatar;
     private LocalDate birthDate;
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
