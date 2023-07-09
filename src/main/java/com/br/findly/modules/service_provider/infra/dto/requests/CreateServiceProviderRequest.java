@@ -1,10 +1,12 @@
 package com.br.findly.modules.service_provider.infra.dto.requests;
 
 import com.br.findly.modules.service_provider.domain.entities.ServiceProvider;
+import com.br.findly.shared.validators.IsOlderThan;
 import com.br.findly.shared.validators.UniqueValue;
 import com.br.findly.shared.validators.ValidateOneNotNull;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 
@@ -33,6 +35,8 @@ public class CreateServiceProviderRequest {
     private String cpf;
 
     @NotBlank(message = "Birth date is required")
+    @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}", message = "Birth date must be in the format yyyy-MM-dd")
+    @IsOlderThan(value = 18)
     private String birthDate;
 
 

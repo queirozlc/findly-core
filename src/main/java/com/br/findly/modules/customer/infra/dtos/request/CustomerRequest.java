@@ -1,6 +1,7 @@
 package com.br.findly.modules.customer.infra.dtos.request;
 
 import com.br.findly.modules.customer.domain.entity.Customer;
+import com.br.findly.shared.validators.IsOlderThan;
 import com.br.findly.shared.validators.UniqueValue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -24,6 +25,7 @@ public class CustomerRequest {
     private String password;
     @NotBlank(message = "Birth date is required")
     @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}", message = "Birth date must be in the format yyyy-MM-dd")
+    @IsOlderThan(value = 16)
     private String birthDate;
 
     public Customer build() {

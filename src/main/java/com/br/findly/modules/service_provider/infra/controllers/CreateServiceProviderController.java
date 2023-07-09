@@ -22,7 +22,7 @@ public class CreateServiceProviderController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<Void> create(@RequestBody @Valid CreateServiceProviderRequest request) {
+    public ResponseEntity<Void> handle(@RequestBody @Valid CreateServiceProviderRequest request) {
         System.out.println(request);
         ServiceProvider serviceProvider = request.toModel();
         repository.save(serviceProvider);

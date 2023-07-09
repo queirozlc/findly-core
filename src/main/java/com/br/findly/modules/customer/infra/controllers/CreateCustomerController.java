@@ -21,7 +21,7 @@ public class CreateCustomerController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<Void> createCustomer(@RequestBody @Valid CustomerRequest customerRequest) {
+    public ResponseEntity<Void> handle(@RequestBody @Valid CustomerRequest customerRequest) {
         var customerToSave = customerRequest.build();
         customerRepository.save(customerToSave);
         return new ResponseEntity<>(HttpStatus.CREATED);
