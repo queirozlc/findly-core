@@ -25,6 +25,7 @@ public class IsOlderThanValidator implements ConstraintValidator<IsOlderThan, Ob
      */
     @Override
     public boolean isValid(Object o, ConstraintValidatorContext constraintValidatorContext) {
+        if (o == null) return false;
         var localDate = LocalDate.parse(o.toString());
         var date = DateUtils.addYears(DateUtils.truncate(new java.util.Date(), java.util.Calendar.DAY_OF_MONTH), -this.value);
         return localDate.isBefore(LocalDate.of(date.getYear() + 1900, date.getMonth() + 1, date.getDate()));

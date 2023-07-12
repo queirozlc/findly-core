@@ -1,4 +1,4 @@
-package com.br.findly.shared.exceptions;
+package com.br.findly.shared.infra.exceptions;
 
 public class Either<L, R> {
     private final L left;
